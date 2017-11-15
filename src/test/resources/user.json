@@ -1,0 +1,36 @@
+[
+  {
+    "id": "findAllUser",
+    "query": {
+      "operation": "select",
+      "statement": "SELECT * FROM user"
+    }
+  },
+  {
+    "id": "findByNickname",
+    "query": {
+      "operation": "select",
+      "statement": "SELECT * FROM user WHERE user_nick=#{nick}",
+      "params": [
+        {
+          "id": "nick"
+        }
+      ]
+    }
+  },
+  {
+    "id": "findByEmailAndNickname",
+    "query": {
+      "operation": "select",
+      "statement": "SELECT * FROM user WHERE user_nick=#{nick} AND user_email=#{email}",
+      "params": [
+        {
+          "id": "nick"
+        },
+        {
+          "id": "email"
+        }
+      ]
+    }
+  }
+]
